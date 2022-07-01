@@ -1,5 +1,5 @@
 #include <cstdio>
-#include <hello.h>
+#include "hello.h"
 
 int main() {
     hello();

@@ -1,4 +1,4 @@
-#include <glm/vec3.hpp>
+#include "glm/vec3.hpp"
 #include <iostream>
 
 inline std::ostream &operator<<(std::ostream &os, glm::vec3 const &v) {

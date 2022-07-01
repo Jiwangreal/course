@@ -1,13 +1,11 @@
-struct alignas(16) MyVec {
-    float x;
-    float y;
-    float z;
-};
+#include <cmath>
 
-MyVec a[1024];
-
-void func() {
+void func(float *a, float *b, float *c) {
     for (int i = 0; i < 1024; i++) {
-        a[i].x *= a[i].y;
+        float tmp = 0;
+        for (int j = 0; j < 1024; j++) {
+            tmp += a[i] * b[j];
+        }
+        c[i] += tmp;
     }
 }
