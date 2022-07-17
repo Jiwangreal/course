@@ -3,3 +3,8 @@ set(CMAKE_CXX_STANDARD 17)
 project(hellocpp LANGUAGES CXX)
 
 add_executable(cpptest main.cpp)
+
+set(VAR "wangji")
+if ($VAR)
+    message("VAR=${VAR}")
+endif()

@@ -20,7 +20,7 @@ void show(Pig pig) {
 
 int main() {
     Pig pig{"佩奇", 80};
-    show(pig);       // 编译错误
+    // show(pig);       // 编译错误
     show(Pig{pig});  // 编译通过
     return 0;
 }

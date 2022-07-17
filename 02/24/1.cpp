@@ -14,7 +14,10 @@ int main() {
     child->m_parent = parent;
 
     parent = nullptr;  // parent 会被释放。因为 child 指向他的是 **弱引用**
+    printf("parent usecout :%ld\n",parent.use_count());
+    printf("child usecout :%ld\n",child.use_count());
     child = nullptr;   // child 会被释放。因为指向 child 的 parent 已经释放了
-
+    printf("parent usecout :%ld\n",parent.use_count());
+    printf("child usecout :%ld\n",child.use_count());
     return 0;
 }

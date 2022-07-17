@@ -12,7 +12,7 @@ T sum(std::vector<T> const &arr) {
 
 int main() {
     std::vector<int> a = {4, 3, 2, 1};
-    std::cout << sum(a) << std::endl;
+    std::cout << sum(std::vector<int>{1,2}) << std::endl;
     std::vector<float> b = {3.14f, 2.718f};
     std::cout << sum(b) << std::endl;
 }
