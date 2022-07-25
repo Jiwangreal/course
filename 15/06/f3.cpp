@@ -20,7 +20,7 @@ vector<string> split(string s) {
 }
 
 int main() {
-    string s = "hello world pyb teacher good job"s;
+    string s = "hello world pyb teacher good job"s;//¿‡À∆strchr
     vector<string> v = split(s);
     for (auto const &vi: v) {
         cout << vi << endl;
