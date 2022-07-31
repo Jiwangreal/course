@@ -18,6 +18,7 @@ if (WIN32)
 endif()
 
 if (NOT MSVC)
+    ##CCACHE_PROGRAM ccache »√±‡“Î¥¯”–ª∫¥Ê
     find_program(CCACHE_PROGRAM ccache)
     if (CCACHE_PROGRAM)
         message(STATUS "Found CCache: ${CCACHE_PROGRAM}")

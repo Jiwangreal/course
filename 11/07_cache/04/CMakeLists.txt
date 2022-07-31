@@ -5,6 +5,7 @@ add_executable(main main.cpp)
 
 option(WITH_TBB "set to ON to enable TBB, OFF to disable TBB." ON)
 if (WITH_TBB)
+    message("WITH_TBB: ${WITH_TBB}")
     target_compile_definitions(main PUBLIC WITH_TBB)
     find_package(TBB REQUIRED)
     target_link_libraries(main PUBLIC TBB::tbb)

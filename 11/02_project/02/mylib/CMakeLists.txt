@@ -1,5 +1,7 @@
+project(subhellocmake)
 message("mylib got PROJECT_NAME: ${PROJECT_NAME}")
 message("mylib got PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
 message("mylib got PROJECT_BINARY_DIR: ${PROJECT_BINARY_DIR}")
 message("mylib got CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 message("mylib got CMAKE_CURRENT_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}")
+message("mylib got PROJECT_IS_TOP_LEVEL:" ${PROJECT_IS_TOP_LEVEL})

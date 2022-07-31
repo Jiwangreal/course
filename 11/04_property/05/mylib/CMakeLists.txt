@@ -1,1 +1,1 @@
-add_library(mylib SHARED mylib.cpp mylib.h)
+add_library(wangjilib SHARED mylib.cpp mylib.h)
