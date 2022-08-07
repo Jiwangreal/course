@@ -1,1 +1,3 @@
 set(MYVAR ON CACHE BOOL "" FORCE)
+# set(MYVAR ON)
+
