@@ -7,6 +7,7 @@ using namespace std;
 int main() {
     set<int> a = {1, 4, 2, 8, 5, 7};
     unordered_set<int> b = {1, 4, 2, 8, 5, 7};
+    b.rehash(b.bucket(1));
 
     cout << "set: " << a << endl;
     cout << "unordered_set: " << b << endl;
