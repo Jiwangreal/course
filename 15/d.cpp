@@ -16,6 +16,7 @@ struct IObject {
 
 template <class Derived, class Base = IObject>
 struct IObjectClone : Base {
+    if (!std::is_copy_assignable<Base>()) return nullptr;
     virtual shared_ptr<IObject> clone() const override {
         Derived const *that = static_cast<Derived const *>(this);
         return make_shared<Derived>(*that);

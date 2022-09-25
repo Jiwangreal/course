@@ -9,13 +9,13 @@ int main() {
     std::mutex mtx;
     std::thread t1([&] {
         for (int i = 0; i < 1000; i++) {
-            std::unique_lock grd(mtx);
+            std::unique_lock<std::mutex> grd(mtx);
             arr.push_back(1);
         }
     });
     std::thread t2([&] {
         for (int i = 0; i < 1000; i++) {
-            std::unique_lock grd(mtx);
+            std::unique_lock<std::mutex> grd(mtx);
             arr.push_back(2);
             grd.unlock();
             printf("outside of lock\n");

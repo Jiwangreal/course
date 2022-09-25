@@ -23,3 +23,4 @@ int main() {
     getMyClassInstance().someFunc();
     return 0;
 }
+

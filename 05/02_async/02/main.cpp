@@ -23,10 +23,11 @@ int main() {
     std::future<int> fret = std::async([&] {
         return download("hello.zip"); 
     });
-    interact();
+    
     std::cout << "Waiting for download complete..." << std::endl;
     fret.wait();
     std::cout << "Wait returned!" << std::endl;
+    interact();
     int ret = fret.get();
     std::cout << "Download result: " << ret << std::endl;
     return 0;

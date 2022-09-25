@@ -12,7 +12,7 @@ int main() {
 
     std::thread t1([&] {
         for (int i = 0; i < 2; i++) {
-            std::unique_lock lck(mtx);
+            std::unique_lock<std::mutex> lck(mtx);
             cv.wait(lck, [&] {
                 return foods.size() != 0;
             });
@@ -26,7 +26,7 @@ int main() {
 
     std::thread t2([&] {
         for (int i = 0; i < 2; i++) {
-            std::unique_lock lck(mtx);
+            std::unique_lock<std::mutex> lck(mtx);
             cv.wait(lck, [&] {
                 return foods.size() != 0;
             });

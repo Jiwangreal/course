@@ -13,12 +13,12 @@ int main() {
     std::cout << "old=" << old << std::endl;  // 2
 
     int now = counter.load();
-    std::cout << "cnt=" << now << std::endl;  // 3
+    std::cout << "cnt=" << now << std::endl;  // 2
 
     old = 2;
     equal = counter.compare_exchange_strong(old, 3);
     std::cout << "equal=" << equal << std::endl;  // true
-    std::cout << "old=" << old << std::endl;  // 1
+    std::cout << "old=" << old << std::endl;  // 2
 
     now = counter.load();
     std::cout << "cnt=" << now << std::endl;  // 3
